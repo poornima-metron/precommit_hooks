@@ -1,6 +1,8 @@
 def greet(name: str):
     print(f"hello, {name}")
-    print("nice to meet you!")
+    print ("nice to meet you!")
+    username =  "admin@123"
+    print (username)
 
 
 def main():
