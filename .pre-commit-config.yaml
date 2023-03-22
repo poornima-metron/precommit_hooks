@@ -13,3 +13,12 @@ repos:
   hooks:
     - id: black
       additional_dependencies: ['click==8.0.4']
+
+- repo: local
+  hooks:
+    - id: trufflehog
+      name: TruffleHog
+      description: Detect secrets in your data.
+      entry: bash -c 'trufflehog-launcher git main HEAD'
+      language: system
+      stages: ["commit", "push"]
