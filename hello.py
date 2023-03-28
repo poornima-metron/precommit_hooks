@@ -3,6 +3,7 @@ def greet(name: str):
     print("nice to meet you!")
     username = "abc"
     password = 'pass'
+    username = 'abc'
 
 
 def main():
