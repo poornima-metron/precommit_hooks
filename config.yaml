@@ -63,12 +63,12 @@ inputs:
 #        historic_date_utc:                #example date = 2022-11-15T14:32:33Z
 #        override_tag: my.app.nebula.vulnerabilitymanagement
 #
-      detections:
-        request_period_in_seconds: 600
-        historic_date_utc:                #example date = 2022-11-23T08:12:57.422Z
-        override_page_size: 2000
-        override_tag: my.app.nebula.detections
-#
+#      detections:
+#        request_period_in_seconds: 600
+#        historic_date_utc:                #example date = 2022-11-23T08:12:57.422Z
+#        override_page_size: 2000
+#        override_tag: my.app.nebula.detections
+##
 #      dns_log_data:
 #        request_period_in_seconds: 20
 #        historic_date_utc:                #example date = 2022-11-23T08:12:57.422Z
