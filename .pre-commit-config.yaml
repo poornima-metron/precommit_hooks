@@ -1,0 +1,34 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+#- repo: local
+#  hooks:
+#    - id: trufflehog
+#      name: TruffleHog
+#      description: Detect secrets in your data.
+#      entry: bash -c 'trufflehog-launcher git main HEAD'
+#      language: system
+#      stages: ["commit", "push"]
+
+#- repo: local
+#  hooks:
+#    - id: trufflehog
+#      name: TruffleHog
+#      description: Detect secrets in your data.
+#      entry: bash -c 'trufflehog https://github.com/poornima-metron/precommit_hooks.git'
+#      # For running trufflehog in docker, use the following entry instead:
+#      # entry: bash -c 'docker run --rm -v "$(pwd):/workdir" -i --rm trufflesecurity/trufflehog:latest git file:///workdir --since-commit HEAD --only-verified --fail'
+#      language: system
+#      stages: ["commit", "push"]
+
+- repo: local
+  hooks:
+    - id: trufflehog
+      name: Check for potential credentials
+      entry: trufflehog --entropy=True --regex --max_depth=10 --exclude_paths=tests --exclude_paths=node_modules
+      language: system
+      types: [ python, javascript, yaml, json, html, css, shell ]
+      stages: ["commit", "push"]
+
+
+

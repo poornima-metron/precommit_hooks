@@ -1,0 +1,76 @@
+globals:
+  debug: false
+  id: not_used
+  name: example_collector
+  persistence:
+    type: filesystem
+    config:
+      directory_name: state
+#    type: redis
+#    config:
+#      host: host
+#      port: port
+#      password: password
+#      db: db
+outputs:
+  devo_eu_1:
+    type: devo_platform
+    config:
+      address: collector-eu.devo.io
+      port: 443
+      type: SSL
+      chain: chain.crt
+      cert: if_metronlabs.crt
+      key: if_metronlabs.key
+  #  relay_1:
+  #    type: syslog
+  #    config:
+  #      address: 127.0.0.1
+  #      port: 13000
+  #      period_sender_stats_in_seconds: 60
+  #      concurrent_connections: 2
+#  console_1:
+#    type: console
+inputs:
+  example_input:
+    id: 12345
+    enabled: true
+    requests_per_second: 5
+    api_base_url: https://api.malwarebytes.com
+    credentials:
+      client_id: mwb-cloud-c9b4ea3ffabe1c287fb0bd0ed2863d88
+      client_secret: 424abaf1dd3fcc2a9418d45aae80940d2191faacffb170302aa2babc9bf2fa2d
+      account_id: f5ab988b-9a3c-4de5-bc85-7047b200ed23
+      password: abcd
+    services:
+#      events:
+#        request_period_in_seconds: 600
+#        historic_date_utc:             #example date = 2022-11-23T08:12:57.422Z
+#        override_tag: my.app.nebula.events
+
+#      notifications:
+#        request_period_in_seconds: 600
+#        historic_date_utc:               #example date = 2022-11-23T08:12:57.422Z
+#        override_tag: my.app.nebula.notifications
+#
+#      suspicious_activity:
+#        request_period_in_seconds: 600
+#        historic_date_utc:               #example date = 2022-11-23T08:12:57.422Z
+#        override_tag: my.app.nebula.suspiciousactivity
+#
+#      vulnerability_management:
+#        request_period_in_seconds: 600
+#        historic_date_utc:                #example date = 2022-11-15T14:32:33Z
+#        override_tag: my.app.nebula.vulnerabilitymanagement
+#
+      detections:
+        request_period_in_seconds: 600
+        historic_date_utc:                #example date = 2022-11-23T08:12:57.422Z
+        override_page_size: 2000
+        override_tag: my.app.nebula.detections
+#
+#      dns_log_data:
+#        request_period_in_seconds: 20
+#        historic_date_utc:                #example date = 2022-11-23T08:12:57.422Z
+#        override_page_size: 2000
+#        override_tag: my.app.nebula.dnslogdata
