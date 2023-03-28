@@ -16,6 +16,7 @@ repos:
   - id: trufflehog
     args: [--regex, --max_depth=10, --exclude_paths=tests, --exclude_paths=node_modules]
     types: [ python, javascript, yaml, json, html, css, shell ]
+    files: .
 
 
 #- repo: local
