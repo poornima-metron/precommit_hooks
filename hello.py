@@ -4,6 +4,7 @@ def greet(name: str):
     username = 'abc'
     password = 'abc'
     print(username)
+    print()
 
 
 def main():

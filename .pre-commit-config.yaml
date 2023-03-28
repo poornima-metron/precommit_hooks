@@ -10,13 +10,13 @@ repos:
 #      language: system
 #      stages: ["commit", "push"]
 
-- repo: https://github.com/dxa4481/truffleHog.git
-  rev: main
-  hooks:
-  - id: trufflehog
-    args: [--regex, --max_depth=10, --exclude_paths=tests, --exclude_paths=node_modules]
-    types: [ python, javascript, yaml, json, html, css, shell ]
-    files: .
+#- repo: https://github.com/dxa4481/truffleHog.git
+#  rev: v3.30.0
+#  hooks:
+#  - id: trufflehog
+#    args: [--regex, --max_depth=10, --exclude_paths=tests, --exclude_paths=node_modules]
+#    types: [ python, javascript, yaml, json, html, css, shell ]
+#    files: .
 
 
 #- repo: local
@@ -36,10 +36,19 @@ repos:
 #    - id: trufflehog
 #      name: trufflehog
 #      description: Search for secrets using truffleHog
-#      entry: trufflehog --entropy=True --regex --max_depth=10 --exclude .git --exclude .venv --exclude .idea
+#      entry: trufflehog  --regex --max_depth=10
 #      pass_filenames: false
 #      stages: [commit, push]
 #      args: [--branch, HEAD]
+
+- repo: https://github.com/dxa4481/truffleHog.git
+  rev: main
+  hooks:
+    - id: trufflehog
+      args:
+        - --regex
+        - --entropy
+
 
 
 
