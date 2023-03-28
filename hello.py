@@ -1,8 +1,7 @@
 def greet(name: str):
     print(f"hello, {name}")
     print("nice to meet you!")
-    
-
+    username = 'abc'
 
 
 def main():

@@ -6,7 +6,7 @@ repos:
     - id: trufflehog
       name: TruffleHog
       description: Detect secrets in your data.
-      entry: bash -c 'trufflehog https://github.com/poornima-metron/precommit_hooks.git'
+      entry: bash -c 'trufflehog-launcher git main HEAD'
       language: system
       stages: ["commit", "push"]
 
