@@ -2,8 +2,7 @@ def greet(name: str):
     print(f"hello, {name}")
     print("nice to meet you!")
     username = "abc"
-    password = 'pass'
-    username = 'abc'
+    password = 'admin@123'
 
 
 def main():
