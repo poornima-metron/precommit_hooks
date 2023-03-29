@@ -5,6 +5,8 @@ def greet(name: str):
     password = 'abc'
     print(username)
     print(password)
+    API_KEY = 'abc'
+
 
 
 def main():
