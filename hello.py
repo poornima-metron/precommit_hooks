@@ -1,12 +1,6 @@
-def greet(name: str):
-    print(f"hello, {name}")
-    print("nice to meet you!")
+username = ''
+password = ''
 
+# This line should be allowed because it sets the 'word' variable to an empty string
+word = ""
 
-def main():
-    for name in "James", "Subscriber", "other":
-        greet(name)
-
-
-if __name__ == "__main__":
-    main()
