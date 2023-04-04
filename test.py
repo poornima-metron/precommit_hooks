@@ -1,2 +1,6 @@
+# test.py
+
 username = ''
-password = 'abc'
+password = ''
+secret_key = '12345'
+num = 'username'
