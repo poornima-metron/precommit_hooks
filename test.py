@@ -1,6 +1,3 @@
 # test.py
+username = 'aa'
 
-username = ''
-password = ''
-secret_key = '12345'
-num = 'username'
