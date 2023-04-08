@@ -1,3 +1,3 @@
 # test.py
-username = 'aak'
-
+username = ''
+password = ''
