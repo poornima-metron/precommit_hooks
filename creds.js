@@ -1,6 +1,6 @@
 const num1 = 5;
 const num2 = 3;
-var username = ''
+const username = ''
 // add two numbers
 const sum = num1 + num2;
 
