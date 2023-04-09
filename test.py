@@ -1,4 +1,4 @@
 # test.py
-username = 'aaa'
-password = 'aa'
+username = ''
+password = ''
 word = 'username'
